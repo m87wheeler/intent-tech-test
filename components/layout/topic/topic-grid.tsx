@@ -13,7 +13,7 @@ const TopicGrid = ({ navigation, topics }: Props) => {
           {topics.map(({ id, ...rest }: TopicType) => (
             <li
               key={id}
-              className="topic-grid-item border-t-2 border-l-2 border-grid-grey"
+              className="topic-grid__item border-t-2 border-l-2 border-grid-grey"
             >
               <Topic {...rest} />
             </li>

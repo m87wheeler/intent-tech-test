@@ -11,6 +11,10 @@ type Props = { data: Record<string, any> };
 const HomePage = ({ data }: Props) => {
   const topics = Array.isArray(data) ? data : ([] satisfies TopicType[]);
 
+  // TODO move logic to designated context provider for topic-grid
+  const [activeItem, setActiveItem] = React.useState(0);
+  const handleActiveItem = (i: number) => setActiveItem(i);
+
   return (
     <>
       <Section
@@ -23,7 +27,21 @@ const HomePage = ({ data }: Props) => {
           />
         }
       >
-        <TopicGrid navigation={<TopicGridNavigation />} topics={topics} />
+        <TopicGrid
+          navigation={
+            <TopicGridNavigation
+              navigationItems={[
+                "personal finance",
+                "careers",
+                "start-ups",
+                "trending",
+              ]}
+              activeItem={activeItem}
+              handleActiveItem={handleActiveItem}
+            />
+          }
+          topics={topics}
+        />
       </Section>
     </>
   );

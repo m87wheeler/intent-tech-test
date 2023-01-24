@@ -52,57 +52,75 @@ body,
 
 
 
-.topic-grid-item {
+.topic-grid__item {
     border-left-width: 0;
     border-top-width: 2px;
 }
 
-.topic-grid-item:first-of-type {
+.topic-grid__item:first-of-type {
     border-top-width: 0;
 }
 
+.topic-grid__nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background-color: #f3c650;
+    opacity: 0;
+    transition: all 350ms ease-in-out;
+}
+
+.topic-grid__nav-button--active::after {
+    width: 3rem;
+    opacity: 1;
+}
+
 @media only screen and (min-width: 768px) {
-    .topic-grid-item {
+    .topic-grid__item {
         border-left-width: 2px;
     }
 
-    .topic-grid-item:nth-of-type(2) {
+    .topic-grid__item:nth-of-type(2) {
         border-top-width: 0;
     }
 
-    .topic-grid-item:nth-of-type(1),
-    .topic-grid-item:nth-of-type(3),
-    .topic-grid-item:nth-of-type(5),
-    .topic-grid-item:nth-of-type(7) {
+    .topic-grid__item:nth-of-type(1),
+    .topic-grid__item:nth-of-type(3),
+    .topic-grid__item:nth-of-type(5),
+    .topic-grid__item:nth-of-type(7) {
         border-left-width: 0;
     }
 }
 
 @media only screen and (min-width: 1024px) {
 
-    .topic-grid-item:nth-of-type(1),
-    .topic-grid-item:nth-of-type(5) {
+    .topic-grid__item:nth-of-type(1),
+    .topic-grid__item:nth-of-type(5) {
         border-left: 0;
     }
 
-    .topic-grid-item:nth-of-type(1),
-    .topic-grid-item:nth-of-type(3),
-    .topic-grid-item:nth-of-type(5),
-    .topic-grid-item:nth-of-type(7) {
+    .topic-grid__item:nth-of-type(1),
+    .topic-grid__item:nth-of-type(3),
+    .topic-grid__item:nth-of-type(5),
+    .topic-grid__item:nth-of-type(7) {
         border-left-width: 2px;
     }
 
-    .topic-grid-item:nth-of-type(1),
-    .topic-grid-item:nth-of-type(2),
-    .topic-grid-item:nth-of-type(3),
-    .topic-grid-item:nth-of-type(4) {
+    .topic-grid__item:nth-of-type(1),
+    .topic-grid__item:nth-of-type(2),
+    .topic-grid__item:nth-of-type(3),
+    .topic-grid__item:nth-of-type(4) {
         border-top: none;
 
     }
 
-    .topic-grid-item:nth-of-type(5),
-    .topic-grid-item:nth-of-type(6),
-    .topic-grid-item:nth-of-type(7) {
+    .topic-grid__item:nth-of-type(5),
+    .topic-grid__item:nth-of-type(6),
+    .topic-grid__item:nth-of-type(7) {
         border-bottom: none;
     }
 }

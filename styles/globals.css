@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    src: url("/assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
     font-family: Avenir;
     font-weight: normal;
     src: url("/assets/fonts/AvenirLTStd-Book.otf") format("opentype");
@@ -37,4 +44,65 @@ body,
     margin-inline: auto;
     display: flex;
     flex-flow: column nowrap;
+}
+
+.section-header {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+
+.topic-grid-item {
+    border-left-width: 0;
+    border-top-width: 2px;
+}
+
+.topic-grid-item:first-of-type {
+    border-top-width: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .topic-grid-item {
+        border-left-width: 2px;
+    }
+
+    .topic-grid-item:nth-of-type(2) {
+        border-top-width: 0;
+    }
+
+    .topic-grid-item:nth-of-type(1),
+    .topic-grid-item:nth-of-type(3),
+    .topic-grid-item:nth-of-type(5),
+    .topic-grid-item:nth-of-type(7) {
+        border-left-width: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .topic-grid-item:nth-of-type(1),
+    .topic-grid-item:nth-of-type(5) {
+        border-left: 0;
+    }
+
+    .topic-grid-item:nth-of-type(1),
+    .topic-grid-item:nth-of-type(3),
+    .topic-grid-item:nth-of-type(5),
+    .topic-grid-item:nth-of-type(7) {
+        border-left-width: 2px;
+    }
+
+    .topic-grid-item:nth-of-type(1),
+    .topic-grid-item:nth-of-type(2),
+    .topic-grid-item:nth-of-type(3),
+    .topic-grid-item:nth-of-type(4) {
+        border-top: none;
+
+    }
+
+    .topic-grid-item:nth-of-type(5),
+    .topic-grid-item:nth-of-type(6),
+    .topic-grid-item:nth-of-type(7) {
+        border-bottom: none;
+    }
 }

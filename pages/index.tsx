@@ -3,27 +3,30 @@ import Section from "~/components/layout/section/section";
 import SectionHeader from "~/components/layout/section/section-header";
 import TopicGrid from "~/components/layout/topic/topic-grid";
 import TopicGridNavigation from "~/components/layout/topic/topic-grid-navigation";
+import { db } from "~/db";
+import { TopicType } from "~/types";
 
-const TEMP_TOPICS = [
-  {
-    id: 1,
-    title: "Loan Payments",
-    description:
-      "Compare rates, crunch numbers and get expert guidance for life.",
-    icon: "",
-  },
-];
+type Props = { data: Record<string, any> };
 
-type Props = {};
+const HomePage = ({ data }: Props) => {
+  const topics = Array.isArray(data) ? data : ([] satisfies TopicType[]);
 
-const HomePage = ({}: Props) => {
   return (
     <>
       <Section header={<SectionHeader />}>
-        <TopicGrid navigation={<TopicGridNavigation />} topics={TEMP_TOPICS} />
+        <TopicGrid navigation={<TopicGridNavigation />} topics={topics} />
       </Section>
     </>
   );
 };
 
 export default HomePage;
+
+export async function getStaticProps() {
+  try {
+    // Real fetch request goes here
+    return { props: { data: db.topics } };
+  } catch (_) {
+    return { notFound: true };
+  }
+}

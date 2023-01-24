@@ -1,12 +1,6 @@
-import Image from "next/image";
 import * as React from "react";
-
-type TopicType = {
-  id: number;
-  icon: string;
-  title: string;
-  description: string;
-};
+import Topic from "~/components/atom/topic";
+import { TopicType } from "~/types";
 
 type Props = { navigation?: React.ReactNode; topics: TopicType[] };
 
@@ -15,14 +9,13 @@ const TopicGrid = ({ navigation, topics }: Props) => {
     <div>
       {navigation}
       {Array.isArray(topics) ? (
-        <ul>
-          {topics.map(({ id, icon, title, description }: TopicType) => (
-            <li key={id}>
-              <div>
-                <Image src={icon} alt={title} fill />
-              </div>
-              <p>{title}</p>
-              <p>{description}</p>
+        <ul className="flex flex-col md:grid md:grid-cols-2 grid-rows-2 auto-rows-fr lg:grid-cols-4">
+          {topics.map(({ id, ...rest }: TopicType) => (
+            <li
+              key={id}
+              className="topic-grid-item border-t-2 border-l-2 border-grid-grey"
+            >
+              <Topic {...rest} />
             </li>
           ))}
         </ul>

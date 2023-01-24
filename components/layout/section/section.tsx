@@ -4,7 +4,7 @@ type Props = { header?: React.ReactNode; children: React.ReactNode };
 
 const Section = ({ header, children }: Props) => {
   return (
-    <section className="section">
+    <section className="section px-8 flex flex-column gap-8">
       {header}
       {children}
     </section>

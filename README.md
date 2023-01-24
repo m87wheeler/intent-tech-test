@@ -1,6 +1,6 @@
 ### Getting Started
 
-Hey, Armon! Nothing very interesting here, but it's always good to make a start :grin:
+Hey, Armon! Nothing very interesting here (in the README that is!), but it's always good to make a start :grin:
 
 ### Install dependencies
 

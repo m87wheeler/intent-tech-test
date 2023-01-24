@@ -10,7 +10,7 @@ const Topic = ({ title, description, icon }: Props) => {
       <div className="absolute w-full max-w-[260px] h-36 bg-gradient-radial from-topic via-white to-white" />
       <div className="relative w-16 h-16 mt-10 mb-6 mx-auto">
         <Image
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain hover:scale-110 transition-transform"
           src={icon}
           alt={title}
           fill

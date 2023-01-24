@@ -28,6 +28,7 @@ const HomePage = ({ data }: Props) => {
         }
       >
         <TopicGrid
+          activePage={activeItem}
           navigation={
             <TopicGridNavigation
               navigationItems={[

@@ -14,12 +14,12 @@ const TopicGridNavigation = ({
 }: Props) => {
   return (
     <nav className="py-8">
-      <ul className="w-full flex flex-col md:flex-row md:justify-around">
+      <ul className="w-full flex flex-col md:flex-row md:justify-around items-center">
         {navigationItems.map((item, i: number) => (
           <li key={i}>
             <button
               className={cn(
-                "relative topic-grid__nav-button uppercase text-xs font-bold tracking-widest",
+                "relative mb-4 md:mb-0 topic-grid__nav-button uppercase text-xs font-bold tracking-widest",
                 { "topic-grid__nav-button--active": activeItem === i }
               )}
               onClick={() => handleActiveItem(i)}

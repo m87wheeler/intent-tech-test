@@ -13,7 +13,16 @@ const HomePage = ({ data }: Props) => {
 
   return (
     <>
-      <Section header={<SectionHeader />}>
+      <Section
+        header={
+          <SectionHeader
+            subtitle="Areas of focus"
+            title="Discover an interest or topic"
+            description="Compare rates, crunsh numbers and get expret admive for life's biggest financial moments"
+            variant="primary"
+          />
+        }
+      >
         <TopicGrid navigation={<TopicGridNavigation />} topics={topics} />
       </Section>
     </>

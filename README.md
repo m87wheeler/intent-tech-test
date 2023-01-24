@@ -6,6 +6,10 @@ Hey, Armon! Nothing very interesting here, but it's always good to make a start 
 
 `yarn` or `npm i`
 
+### Add custom .env (if you need it)
+
+`cp .env.example .env`
+
 ### Run dev server
 
 `yarn dev` or `npm run dev`

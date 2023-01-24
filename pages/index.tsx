@@ -1,4 +1,5 @@
 import * as React from "react";
+import Metadata from "~/components/atom/metadata";
 import Section from "~/components/layout/section/section";
 import SectionHeader from "~/components/layout/section/section-header";
 import TopicGrid from "~/components/layout/topic/topic-grid";
@@ -17,6 +18,11 @@ const HomePage = ({ data }: Props) => {
 
   return (
     <>
+      <Metadata
+        title="Intent Tech Test | Hey Armon!"
+        description="I left a few comments dotted around for you"
+        keywords="NextJS, Tailwind, TypeScript, Responsive, Components, Interactive"
+      />
       <Section
         header={
           <SectionHeader

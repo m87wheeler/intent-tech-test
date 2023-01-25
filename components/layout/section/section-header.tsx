@@ -19,13 +19,13 @@ const SectionHeader = ({
 }: Props) => {
   return (
     <header className="max-w-xl px-8 flex flex-col gap-4 items-center text-center">
-      <p
+      <Typography
         className={cn(`text-black uppercase text-sm font-bold`, {
           "text-primary": variant === "primary",
         })}
       >
         {subtitle}
-      </p>
+      </Typography>
       <Typography variant={hType}>{title}</Typography>
       <p className="max-w-md text-center">{description}</p>
     </header>

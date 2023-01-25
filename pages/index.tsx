@@ -1,4 +1,5 @@
 import * as React from "react";
+import Button from "~/components/atom/button";
 import Metadata from "~/components/atom/metadata";
 import Section from "~/components/layout/section/section";
 import SectionHeader from "~/components/layout/section/section-header";
@@ -27,8 +28,8 @@ const HomePage = ({ data }: Props) => {
         header={
           <SectionHeader
             subtitle="Areas of focus"
-            title="Discover an interest or topic"
-            description="Compare rates, crunsh numbers and get expret admive for life's biggest financial moments"
+            title="Discover an interest or topic."
+            description="Compare rates, crunsh numbers and get expret admive for life's biggest financial moments."
             variant="primary"
           />
         }
@@ -49,6 +50,9 @@ const HomePage = ({ data }: Props) => {
           }
           topics={topics}
         />
+        <Button href="https://intent.uk/" external>
+          View All Of Our Latest
+        </Button>
       </Section>
     </>
   );

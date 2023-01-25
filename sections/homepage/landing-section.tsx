@@ -26,7 +26,10 @@ const LandingSection = ({ brands }: Props) => {
         name="landing-input"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        handleClick={() => console.log("Go!")}
+        handleClick={() => {
+          alert(inputValue);
+          setInputValue("");
+        }}
       >
         Go
       </TextInput>

@@ -22,12 +22,6 @@ const LandingSection = ({ brands }: Props) => {
         />
       }
     >
-      <Image
-        src="/assets/images/landing-background.png"
-        alt="landing-background"
-        style={{ maxHeight: "775px", zIndex: -1 }}
-        fill
-      />
       <TextInput
         name="landing-input"
         value={inputValue}

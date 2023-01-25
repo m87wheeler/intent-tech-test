@@ -15,6 +15,7 @@ const TopicsSection = ({ topics }: Props) => {
 
   return (
     <Section
+      fullHeight
       header={
         <SectionHeader
           subtitle="Areas of focus"

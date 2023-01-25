@@ -1,5 +1,6 @@
 import * as React from "react";
 import Metadata from "~/components/atom/metadata";
+import LandingSection from "~/sections/homepage/landing-section";
 import TopicsSection from "~/sections/homepage/topics-section";
 import { db } from "~/db";
 import { TopicType } from "~/types";
@@ -16,6 +17,7 @@ const HomePage = ({ data }: Props) => {
         description="I left a few comments dotted around for you"
         keywords="NextJS, Tailwind, TypeScript, Responsive, Components, Interactive"
       />
+      <LandingSection />
       <TopicsSection topics={topics} />
     </>
   );

@@ -1,11 +1,13 @@
 import * as React from "react";
 import cn from "classnames";
+import Typography from "~/components/atom/typography";
 
 type Props = {
   subtitle: string;
   title: string;
   description: string;
-  variant: "default" | "primary";
+  variant?: "default" | "primary";
+  hType?: "h1" | "h2";
 };
 
 const SectionHeader = ({
@@ -13,17 +15,18 @@ const SectionHeader = ({
   title,
   description,
   variant = "default",
+  hType = "h2",
 }: Props) => {
   return (
-    <header className="px-8 flex flex-col gap-4 items-center text-center">
+    <header className="max-w-xl px-8 flex flex-col gap-4 items-center text-center">
       <p
-        className={cn("text-black uppercase text-sm font-bold", {
+        className={cn(`text-black uppercase text-sm font-bold`, {
           "text-primary": variant === "primary",
         })}
       >
         {subtitle}
       </p>
-      <h2 className="section-header text-5xl">{title}</h2>
+      <Typography variant={hType}>{title}</Typography>
       <p className="max-w-md text-center">{description}</p>
     </header>
   );

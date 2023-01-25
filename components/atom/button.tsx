@@ -8,7 +8,7 @@ interface Props extends React.ComponentPropsWithoutRef<"button"> {
 
 const Button = ({ children, href, external = false, ...props }: Props) => {
   const sharedClassNames =
-    "inline-block bg-primary font-bold text-xs uppercase px-24 py-8 tracking-widest";
+    "w-full max-w-md inline-block bg-primary font-bold text-xs uppercase p-8 tracking-widest text-center";
 
   // external link
   if (href && external)

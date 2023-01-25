@@ -1,4 +1,16 @@
-export const db = {
+import { BrandType, TopicType } from "~/types";
+
+interface IDatabase {
+  brands: BrandType[];
+  topics: TopicType[];
+}
+
+export const db: IDatabase = {
+  brands: [
+    { id: 1, name: "Forbes", icon: "/assets/icons/forbes.png" },
+    { id: 2, name: "The Wall Street Journal", icon: "/assets/icons/wsj.png" },
+    { id: 3, name: "Wealthfront", icon: "/assets/icons/wealthfront.png" },
+  ],
   topics: [
     {
       id: 1,

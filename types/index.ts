@@ -5,6 +5,12 @@ export type TopicType = {
   description: string;
 };
 
+export type BrandType = {
+  id: number;
+  icon: string;
+  name: string;
+};
+
 export interface IApiResponse {
   success: boolean;
   message: string;

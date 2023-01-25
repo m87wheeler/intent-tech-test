@@ -1,12 +1,12 @@
 import * as React from "react";
 import Image from "next/image";
 import LandingSection from "~/sections/homepage/landing-section";
+import MainLogo from "~/components/atom/main-logo";
 import Metadata from "~/components/atom/metadata";
 import PageHeader from "~/components/molecule/page-header";
 import TopicsSection from "~/sections/homepage/topics-section";
 import { db } from "~/db";
 import { TopicType } from "~/types";
-import MainLogo from "~/components/atom/main-logo";
 
 type Props = { data: Record<string, any> };
 

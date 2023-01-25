@@ -2,8 +2,8 @@ import * as React from "react";
 import Button from "~/components/atom/button";
 import Section from "~/components/layout/section/section";
 import SectionHeader from "~/components/layout/section/section-header";
-import TopicGrid from "~/components/layout/topic/topic-grid";
-import TopicGridNavigation from "~/components/layout/topic/topic-grid-navigation";
+import TopicGrid from "~/components/molecule/topic-grid";
+import TopicGridNavigation from "~/components/molecule/topic-grid-navigation";
 import { TopicType } from "~/types";
 
 type Props = { topics: TopicType[] };

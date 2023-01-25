@@ -5,7 +5,7 @@ type Props = { title: string | React.ReactNode };
 
 const PageHeader = ({ title }: Props) => {
   return (
-    <header>
+    <header className="flex justify-center pt-8 pb-24">
       <Typography variant="h1">{title}</Typography>
     </header>
   );
